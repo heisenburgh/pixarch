@@ -203,7 +203,7 @@ bindsym $mod+r mode "resize"
 
 gaps inner 10
 gaps outer 6
-for_window [class="^.*"] border pixel 10
+for_window [class="^.*"] border pixel 0
 
 
 
