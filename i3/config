@@ -38,7 +38,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xrandr --output Virtual-1 --mode 1920x1080
 
 #Set wallpaper
-exec --no-startup-id feh --bg-scale ~/.config/wallpapers/japanesecastle.jpg
+exec --no-startup-id feh --bg-scale ~/pixarch/wallpapers/japanesecastle.jpg
 
 #Start picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
