@@ -1,9 +1,8 @@
 #!/bin/sh
 echo "Welcome to Pixarch Installation"
-read -p "Do you want to install Pixarch[Y/N]:" choice
+read -p "Do you want to install Pixarch[Y/N]: " choice
 
 var="Y"
-echo "$var $choice"
 if [ $choice = $var ]
 then
     echo "Beginning installation for Pixarch..."
@@ -11,7 +10,7 @@ then
     # sudo pacman -S feh lightdm polybar rofi alacritty picom vim git
 
     echo "Installing LightDM..."
-    read -p "Do you want to install the LightDM configuration?\n\nNOTE:\n1. Enter 'b' if you want to make a backup of your config file and store it in ~/.backupconfigs/lightdm/lightdm.conf, your original file lightdm.conf will be delete and the pixarch configuration file will be installed.\n2. Enter 'y' if you want to install lightdm.conf without making a backup. This will overwrite your current config.\n3. Enter 's' to skip lightdm's installation." selection
+    read -p "Do you want to install the LightDM configuration?`echo $'\n>>> '`NOTE:`echo $'\n\n> '`1. Enter 'b' if you want to make a backup of your config file and store it in ~/.backupconfigs/lightdm/lightdm.conf, your original file lightdm.conf will be deleted and the pixarch configuration file will be installed.`echo $'\n\n> '`2. Enter 'y' if you want to install lightdm.conf without making a backup. This will overwrite your current config.`echo $'\n\n> '`3. Enter 's' to skip lightdm's installation.`echo $'\n'`Enter Choice: " selection
 
 else
     echo "Bye."
