@@ -1,18 +1,21 @@
 #general settings
-message-font: "Monocraft 12"
-message-color: "#000"
+title-text: "Pixarch Grub Menu"
+title-font: "Monocraft Bold 32"
+title-color: "#C5C8C6"
+message-font: "Monocraft Regular 32"
+message-color: "#C5C8C6"
 message-bg-color: "#fff"
 desktop-image: "grub-wallpaper.png"
 
 #boot menu
 +boot_menu {
 	left=10%
-	width=100%
-	height=100%
+	width=80%
+	height=50%
 	top=20%
-	item_font = "Monocraft 16"
+	item_font = "Monocraft Regular 25"
 	item_color = "#C5C8C6"
-	selected_item_font = "Monocraft 18"
+	selected_item_font = "Monocraft Bold 25"
 	selected_item_color = "#F0C674"
 	icon_height = 25
 	icon_width=25
@@ -27,13 +30,14 @@ desktop-image: "grub-wallpaper.png"
 #progress bar
 + progress_bar {
 	id = "__timeout__"
+	left=10%
 	top=80%
 	height=20
-	width=100%
-	font = "Monocraft 14"
+	width=80%
+	font = "Monocraft Regular 25"
 	text_color = "#000"
 	fg_color = "#fff"
 	bg_color = "#6ac"
 	border_color = "#fff"
-	text = "@TIMEOUT_NOTIFICATION_LONG@"	
+	text = "@TIMEOUT_NOTIFICATION_MIDDLE@"	
 }
