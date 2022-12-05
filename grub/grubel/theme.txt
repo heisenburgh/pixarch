@@ -1,11 +1,31 @@
 #general settings
-title-text: "Pixarch Grub Menu"
-title-font: "Monocraft Bold 32"
-title-color: "#C5C8C6"
-message-font: "Monocraft Regular 32"
+title-text: ""
+message-font: "Monocraft Regular 25"
 message-color: "#C5C8C6"
 message-bg-color: "#fff"
-desktop-image: "grub-wallpaper.png"
+desktop-image: "grubwallpaper.png"
+
+#Message
++ label {
+	top = 45%
+	left=0
+	width=100%
+	text="A dangerous path lies ahead."
+	align = "center"
+	font = "Monocraft 32"
+	color = "#FFF"
+}
+# Will you still continue?
++ label {
+	top = 50%
+	left=0
+	width=100%
+	text="Will you still continue?"
+	align = "center"
+	font = "Monocraft 32"
+	color = "#FFF"
+}
+
 
 #boot menu
 +boot_menu {
@@ -13,6 +33,7 @@ desktop-image: "grub-wallpaper.png"
 	width=80%
 	height=50%
 	top=20%
+	text = "Take me to Pixarch(Continue)"
 	item_font = "Monocraft Regular 25"
 	item_color = "#C5C8C6"
 	selected_item_font = "Monocraft Bold 25"
@@ -25,19 +46,4 @@ desktop-image: "grub-wallpaper.png"
 	item_spacing = 1
 	scrollbar = true
 	scrollbar_width = 10
-}
-
-#progress bar
-+ progress_bar {
-	id = "__timeout__"
-	left=10%
-	top=80%
-	height=20
-	width=80%
-	font = "Monocraft Regular 25"
-	text_color = "#000"
-	fg_color = "#fff"
-	bg_color = "#6ac"
-	border_color = "#fff"
-	text = "@TIMEOUT_NOTIFICATION_MIDDLE@"	
 }
