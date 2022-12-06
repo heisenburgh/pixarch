@@ -1,4 +1,6 @@
 # Pixarch
+> *"We milked Arch, next is your mom."*
+
 Pixarch is a pixel-themed minimalistic Arch Linux rice. It has its own extremely minimalistic browser named Browsel, and has custom configurations for Rofi, Alacritty, i3 and Polybar.
 Pixarch uses the wonderful [Monocraft](https://github.com/IdreesInc/Monocraft) font made by Idrees Hassan.
 
