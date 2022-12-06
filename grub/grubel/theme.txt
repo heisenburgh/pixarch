@@ -25,7 +25,26 @@ desktop-image: "grubwallpaper.png"
 	font = "Monocraft 32"
 	color = "#FFF"
 }
-
+#Too tired
++ label {
+        top = 55%
+        left=0
+        width=100%
+        text="I was too tired to go on (Quit)"
+        align = "center"
+        font = "Monocraft Regular 48"
+        color = "#676672"
+}
+#Take me to Pixarch
++ label {
+        top = 60%
+        left=0
+        width=100%
+        text="Take me to Pixarch (Continue)"
+        align = "center"
+        font = "Monocraft Regular 48"
+        color = "#676672"
+}
 
 #boot menu
 +boot_menu {
