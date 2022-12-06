@@ -168,7 +168,7 @@ Rectangle {
 		
                 Row {
                     spacing: 0
-                    width: parent.width
+                    width: 0
                     z: 100
 		   /*
                     Column {
