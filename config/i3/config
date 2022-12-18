@@ -37,6 +37,9 @@ exec --no-startup-id nm-applet
 #Set resolution 1920x1080
 exec --no-startup-id xrandr --output Virtual-1 --mode 1920x1080
 
+#Execute Plank Dock
+exec --no-startup-id plank
+
 #Set wallpaper
 exec --no-startup-id feh --bg-scale ~/pixarch/wallpapers/default.png
 

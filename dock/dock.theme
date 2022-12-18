@@ -1,0 +1,11 @@
+[PlankTheme]
+TopRoundness=0
+BottomRoundness=0
+LineWidth=0
+
+[PlankDockTheme]
+TopPadding=-20
+BottomPadding=1
+UrgentBounceHeight=0
+LaunchBounceHeight=0.625
+IndicatorSize=0
