@@ -19,6 +19,8 @@ fi
 
 echo "Copying files to .config directory"
 # Main config installation
+# cd ~/.config/ 
+# sudo rm -r *
 # git clone https://github.com/heisenburgh/pixarch
 # cd pixarch
 # sudo mv * ~/.config

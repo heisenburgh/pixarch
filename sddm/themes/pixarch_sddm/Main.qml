@@ -167,8 +167,8 @@ Rectangle {
                 }
 		
                 Row {
-                    spacing: 0
-                    width: 0
+                    spacing: 4
+                    width: parent.width
                     z: 100
 		   /*
                     Column {
@@ -185,6 +185,7 @@ Rectangle {
                             font.family: "Monocraft"
 			    font.bold: true
                             font.pixelSize: 12
+			    color: "white"
                         }
 
                         ComboBox {
@@ -194,14 +195,18 @@ Rectangle {
                             font.pixelSize: 14
 
                             arrowIcon: "angle-down.png"
-
+                            color: Qt.rgba(0, 0, 0, 0.2)
+                            borderColor: "transparent"
+                            focusColor: Qt.rgba(0, 0, 0, 0.25)
+                            hoverColor: Qt.rgba(0, 0, 0, 0.2)
+                            textColor: "white"
                             model: sessionModel
                             index: sessionModel.lastIndex
 
                             KeyNavigation.backtab: password; KeyNavigation.tab: layoutBox
                         }
                     }
-		    */
+		    
                     Column {
                         z: 101
                         width: parent.width * 0.7
