@@ -3,8 +3,13 @@
 Linux Distributions, in general, do not look as polished as proprietary operating systems, for example MacOS. Even distributions focused to solely provide an aesthetically pleasing environment to work in (for example XeroLinux), do not have a consistent theme working throughout their ecosystem. Due to this particular reason, newcomers who generally consume the mainstream media and are intimidated by the command line use the argument of ‘Ugly’ against Linux users by comparing it to other proprietary operating systems. Another problem in the mainstream Linux world is that there is no distribution build specifically with a focus for gaming in mind. Even distributions like Pop!_OS don’t support video games without tweaking some stuff first. Gaming is an important part of most people’s lives and generally, when the topic of Linux gets fired up in front of newbies, the “I can’t play games on Linux” card is often pulled out. This distribution will also focus to fix this issue. Pixarch (for Pixel+Arch) was initially a rice, created by Haard and Me for the i3 window manager. It included a simple yet beautiful Pixel theme, a modified Dock, a configured GRUB theme, and finally a modified Browser with a self-hosted search engine called Browsel (our own fork of Searx). As the idea grew, we felt that there was a need to create ‘yet another’ Linux distribution that had a balance between Minimalism, Eyecandy, moderate Privacy, and Gaming. This project ultimately has the aim of providing a consistent ecosystem that appeals to the general public and is aesthetically pleasing with gaming as it’s main focus, and minimalism and garbage free as its secondary characteristics.
 
 #### Screenshots:
+![VirtualBox_Pixarch_04_12_2022_10_34_44](https://user-images.githubusercontent.com/62053026/210720807-0465050e-2fe8-4718-96e6-be167cdebdf7.jpg)
 
+![VirtualBox_Pixarch_06_12_2022_00_15_11](https://user-images.githubusercontent.com/62053026/210720837-c1423f42-7675-4195-bcdc-17bbcd609dab.jpg)
 
+![IMG_8504](https://user-images.githubusercontent.com/62053026/210720860-ff41bd60-256d-419f-9e3d-4bd59deed608.jpg)
+
+![IMG_4356](https://user-images.githubusercontent.com/62053026/210720877-359421ff-2276-429f-bc58-ec98a4e26a84.jpg)
 
 ## 1. Logistics
 
