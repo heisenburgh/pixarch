@@ -3,7 +3,7 @@
 
 Linux Distributions, in general, do not look as polished as proprietary operating systems, for example *MacOS*. Even distributions focused to solely provide an aesthetically pleasing environment to work in (for example *XeroLinux*), do not have a consistent theme working throughout their ecosystem. Due to this particular reason, newcomers who generally consume the mainstream media and are intimidated by the command line use the argument of ‘Ugly’ against Linux users by comparing it to other proprietary operating systems. Another problem in the mainstream Linux world is that distributions specifically built with a focus for gaming in mind are limited, and rather look too flashy for anyone's taste. Even distributions like Pop!_OS don’t support video games without tweaking some stuff first. Gaming is an important part of most people’s lives and generally, when the topic of Linux gets fired up in front of newbies, the “I can’t play games on Linux” card is often pulled out. This distribution will also focus to fix this issue. *Pixarch (for Pixel+Arch)* was initially a rice, created by [Haard](https://github.com/haardispro) and Me for the i3 window manager. It included a simple yet beautiful Pixel theme, a modified Dock, a configured GRUB theme, and finally a modified Browser with a self-hosted search engine called Browsel (our own fork of Searx). As the idea grew, we felt that there was a need to create ‘yet another’ Linux distribution that had a balance between Minimalism, Eyecandy, moderate Privacy, and Gaming. This project ultimately has the aim of providing a consistent ecosystem that appeals to the general public and is aesthetically pleasing with gaming as it’s main focus, and minimalism and garbage free as its secondary characteristics.
 
-#### Screenshots <img src="https://media0.giphy.com/media/l3V0s5MV1kudEMP9C/giphy.gif?cid=82a1493bfq18fjawj4h3z9idqpfnn5brezcp05ffmdpkw0vf&rid=giphy.gif" width="20" height="25"/>
+## Screenshots <img src="https://media0.giphy.com/media/l3V0s5MV1kudEMP9C/giphy.gif?cid=82a1493bfq18fjawj4h3z9idqpfnn5brezcp05ffmdpkw0vf&rid=giphy.gif" width="20" height="25"/>
 ![VirtualBox_Pixarch_04_12_2022_10_34_44](https://user-images.githubusercontent.com/62053026/210720807-0465050e-2fe8-4718-96e6-be167cdebdf7.jpg)
 
 ![VirtualBox_Pixarch_06_12_2022_00_15_11](https://user-images.githubusercontent.com/62053026/210720837-c1423f42-7675-4195-bcdc-17bbcd609dab.jpg)
@@ -11,6 +11,21 @@ Linux Distributions, in general, do not look as polished as proprietary operatin
 ![IMG_8504](https://user-images.githubusercontent.com/62053026/210720860-ff41bd60-256d-419f-9e3d-4bd59deed608.jpg)
 
 ![IMG_4356](https://user-images.githubusercontent.com/62053026/210720877-359421ff-2276-429f-bc58-ec98a4e26a84.jpg)
+
+## Donations
+The art currently used in this project, is used after taking the permission of the artist. Although this is an open-source project, pixel artists need to be paid their usual fee to get custom made assets. The Pixarch, Browsel, and Pixulator logo along with the UI elements need to be custom made. Any donations will be much appreciated!
+
+**Bitcoin:**
+bc1qn7ch285wyyk8h4w8wzcyqyt69x6z3wg3mak9v5
+
+**BuyMeACoffee:**
+https://www.buymeacoffee.com/heisenburgr
+
+**BCH:**
+qzl2zg758f2rc9g5szwhxs6dqg8vcx9kwg2tdttzkg
+
+**LTC:**
+ltc1qc28rg7nuvrlw7hm6lyern36y4jsyp3u7fxnmtx
 
 ## 1. Logistics <img src="https://media2.giphy.com/media/Gm8w0lMcTY0a4/giphy.gif?cid=82a1493bolqqorahnuv9y1fpi6ryo4hdzjw5dtt6mjdi92uv&rid=giphy.gif" height="25" width="25"/>
 
