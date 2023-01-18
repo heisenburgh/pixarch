@@ -64,14 +64,21 @@ theme=$(dialog --stdout --inputbox "enter sudo password to cp grub theme and sdd
 if [[ $theme =~ y ]]
 then
 	        sudo cp -r $LINKDOT/boot/grub/grubel /boot/grub/
-		sudo mkdir -p /etc/sddm.conf.d/
 		sudo cp -r $LINKDOT/boot/sddm/themes/pixarch_sddm /usr/share/sddm/themes/
 		sudo sed 's/\#GRUB_THEME\=\"\/path\/to\/gfxtheme\"/GRUB_THEME=\"\/boot\/grub\/grubel\/theme.txt\"/' -i /etc/default/grub
-                sudo cp $LINKDOT/installation_scripts/theme.conf /etc/sddm.conf.d/
+                sudo cp $LINKDOT/installation_scripts/theme.conf /etc/sddm.conf
 else 
 	echo "-- you're on your own for theming."
 fi
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo systemctl enable sddm
+
+security=$(dialog --stdout --inputbox "install clamav and ufw? [y/N]" 0 0) || exit 1
+if [[ $security =~ y ]]
+then
+	        sudo sh $LINKDOT/installation_scripts/security.sh
+	else 
+	echo "-- moving on!"
+fi
 
