@@ -170,7 +170,6 @@ Rectangle {
                     spacing: 4
                     width: parent.width
                     z: 100
-		   /*
                     Column {
                         z: 100
                         width: parent.width 
@@ -294,8 +293,4 @@ Rectangle {
     }
 }
 
-/*
 
-
-
-*/
