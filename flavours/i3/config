@@ -41,7 +41,7 @@ exec --no-startup-id xrandr --output Virtual-1 --mode 1920x1080
 exec --no-startup-id plank
 
 #Set wallpaper
-exec --no-startup-id feh --bg-scale ~/pixarch/wallpapers/default.png
+exec --no-startup-id feh --bg-scale ~/pixarch/media/wallpapers/default.png
 
 #Start picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf

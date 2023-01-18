@@ -57,12 +57,14 @@ There is no ISO for Pixarch, to test the theme-ing and contribute, you’ll need
 
 ### 2. Installing Arch Linux
 
-There are two ways to do this; the quick and easy way, and the hard and lengthy way. Recently, in the latest version of the Arch Linux ISO, an automatic installation script called archinstall was introduced. This is a script that automates most of the things for you and makes it quick and easy to install Arch. To install: Download the latest Arch ISO from the website, you can download it through mirrors or through torrent. Whichever one is preferred. For the sake of simplicity, we will be using VirtualBox, so to begin, start by downloading the VirtualBox Windows Host if you use Windows and see install instructions for Linux if you use Linux. Download from here. Install VirtualBox and open it. Start by clicking on ‘New’ to create a new VM. The recommended memory is 2 gigabytes, but if you have more, you are free to provide more. 8 gigabyte of storage is enough. After you create the VM, click on the settings button to configure it. Beef the processor up to 2, and crank up the video memory all the way to 128 megabytes. Attach the previously downloaded Arch ISO to the VM. Apply the settings and close the menu. Click on the Start button to fire up the VM. After you select the Installation Medium option, a prompt will appear. Just type “archinstall” without the quotes, make sure you have a working internet connection. After the script loads, configure all the options according to your needs. In the “Profile” section, select Desktop -> i3 -> i3-gaps -> Virtual Drivers. In the “Additional packages” section, type this word to word: “vim git rofi polybar plank alacritty feh firefox” Complete all the other options and then select the “Install” option at the bottom. This will take some time. After the installation is completed, the installer will ask if you would like to chroot into the newly installed system. Select no and reboot. While rebooting, you can ether eject the ISO from the VM, or you can select the “Boot into existing OS” option on startup.
+Use the install script on the archlinux iso (archinstall) select things as you wish, but opt for the minimal profile.
+when asked about additional packages, request git.
+reboot.
 
 ### 2.1 Installing the dot-files
 
-After rebooting the system, you will see a prompt asking you to set your Mod key. Leave it to the defaults and select OK on each step. Now you’ll have to clone the Pixarch repository. To do this open up a terminal by pressing Mod+Enter (if you left the prompt to its defaults, the mod key will be the ‘Windows’ key, now onwards I’ll use Mod and Windows interchangeably)
-Clone the repository by typing: git clone https://github.com/heisenburgh/pixarch
-Now, you’ll have to move the contents of pixarch/config to your ~/.config folder. Do this by
-typing: mv pixarch/config/* ~/.config mv pixarch/flavours/i3/config ~/.config/i3/config
-You’ll have to move the font from pixarch/fonts/Monocraft.otf to ~/.local/share/fonts (you’ll have to create the directory). After moving it to the location, simply run fc-cache -fv Finally, you’ll have to make some changes to the i3 config file which you just moved to the .config directory. So use your preferred text editor (I use vim) and: Delete line 41 entirely Modify the directory in line 44 to wherever you have cloned the repository If you are using Vbox, change the word Virtual-1 in line 38 to Virtual1 Reboot to see the changes.
+git clone this repo, ( git clone https://github.com/preceptsofzote/pixarch ) to your home dir ( ~ ) and then cd to pixarch/installation_scripts.
+run ./install.sh and follow the prompts.
+on reboot you will be ready to go.
+use mod+space to open rofi (your app launcher) and mod+enter to open alacritty (your terminal emulator).
+
