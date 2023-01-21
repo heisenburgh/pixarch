@@ -66,14 +66,23 @@ when asked about additional packages, request git.
 reboot.
 
 ### 2.1 Installing the dot-files
-Clone this repo to your home directory ( ~ )
-```git clone https://github.com/heisenburgh/pixarch.git```
+Clone this repo to your home directory ( ~ ):
 
-Change directory to pixarch/installation_scripts
-```cd pixarch/installation_scripts```
+```bash
+git clone https://github.com/heisenburgh/pixarch.git
+```
 
-Run install.sh and follow the prompts
-```./install.sh```
+Change directory to pixarch/installation_scripts:
+
+```bash
+cd pixarch/installation_scripts
+```
+
+Run install.sh and follow the prompts:
+
+```bash
+./install.sh
+```
 
 On reboot you will be ready to go 
 Use MOD+space to open Rofi (Your App Launcher) and MOD+enter to open Alacritty (Your Terminal Emulator)
