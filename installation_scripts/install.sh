@@ -16,7 +16,7 @@ xdg-user-dir
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 export PATH=$PATH:/home/$USER/.local/bin
 
-yay=$(dialog --stdout --inputbox "install yay as aur helper? [y/N]" 0 0) || exit 1
+yay=$(dialog --stdout --inputbox "Install yay as AUR helper? [y/N]" 0 0) || exit 1
 clear
 shopt -s nocasematch
 if [[ $yay =~ y ]]
@@ -25,12 +25,12 @@ then
         cd ~/code/aur/yay
         makepkg -si
         yay -S ttf-monocraft
-
+	fc-cache -fv
 else
 			echo "-- skipping, you are on your own for the aur and fonts."
 fi
 
-i3=$(dialog --stdout --inputbox "install i3? [y/N]" 0 0) || exit 1
+i3=$(dialog --stdout --inputbox "Install i3? [y/N]" 0 0) || exit 1
 clear
 shopt -s nocasematch
 if [[ $i3 =~ y ]]
@@ -39,10 +39,10 @@ then
 	ln -sf $LINKDOT/flavours/i3 /home/$USER/.config/
         
 else
-	echo "-- moving to qtile"
+	echo "-- moving to Qtile"
 fi
 
-qtile=$(dialog --stdout --inputbox "install qtile? [y/N]" 0 0) || exit 1
+qtile=$(dialog --stdout --inputbox "Install Qtile? [y/N]" 0 0) || exit 1
 clear
 shopt -s nocasematch
 if [[ $i3 =~ y ]]
@@ -50,7 +50,7 @@ then
 	sudo pacman -S qtile
 	ln -sf $LINKDOT/flavours/qtile /home/$USER/.config/
 else 
-	echo "-- if you didn't install i3 or this, you're on your own for a GUI."
+	echo "-- if you didn't install i3 or Qtile, you're on your own for a GUI."
 fi
 
 ln -sf $LINKDOT/config/alacritty /home/$USER/.config/
@@ -60,7 +60,7 @@ ln -sf $LINKDOT/config/polybar /home/$USER/.config/
 ln -sf $LINKDOT/config/rofi /home/$USER/.config/
 ln -sf $LINKDOT/config/vim /home/$USER/.config/
 
-theme=$(dialog --stdout --inputbox "enter sudo password to cp grub theme and sddm theme to correct locations and fix the config files. otherwise skip configuring both. Understand? [y/N]" 0 0) || exit 1
+theme=$(dialog --stdout --inputbox "Enter sudo password to copy Grub theme and SDDM theme to correct locations and fix the config files. Otherwise skip configuring both. Understand? [y/N]" 0 0) || exit 1
 if [[ $theme =~ y ]]
 then
 	        sudo cp -r $LINKDOT/boot/grub/grubel /boot/grub/
@@ -74,7 +74,7 @@ fi
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo systemctl enable sddm
 
-security=$(dialog --stdout --inputbox "install clamav and ufw? [y/N]" 0 0) || exit 1
+security=$(dialog --stdout --inputbox "Install Clamav and UFW? [y/N]" 0 0) || exit 1
 if [[ $security =~ y ]]
 then
 	        sudo sh $LINKDOT/installation_scripts/security.sh
