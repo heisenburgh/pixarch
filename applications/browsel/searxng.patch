@@ -1,0 +1,24 @@
+--- PKGBUILD	2023-01-21 14:39:28.525413845 -0500
++++ searxng-pkg	2023-01-21 14:39:43.992341404 -0500
+@@ -34,8 +34,8 @@
+ optdepends=('python-hiredis')
+ conflicts=('searx' 'searx-git')
+ backup=('etc/searxng/settings.yml' 'etc/uwsgi/vassals/searxng.ini')
+-_giturl="https://github.com/searxng/searxng"
+-_gitbranch="master"
++_giturl="https://github.com/preceptsofzote/searxng"
++_gitbranch="tests"
+ source=(git+$_giturl#branch=$_gitbranch
+         'searxng.ini'
+         'searxng.sysusers'
+@@ -45,10 +45,6 @@
+         'becbc7783e484d15de32973b9376014b1bf2ba9494bb0fa65d08a9725715d2170c694a529038059ebc6b42969641d8c3cf02235355fbc3a45b02d28fdf0d6392'
+         '1895880f4c541080fd33dde194bb158cf7fc7d397b24e8bde14df586e0dd3dc1547f67bdc3f40161521e1c0f4e244aaab8db5028204c5d9da7972c70c7110ab7')
+ 
+-pkgver() {
+-  cd searxng
+-  git describe --long | sed 's/\([^-]*-g\)/r\1/;s/v//;s/-/./g'
+-}
+ 
+ prepare() {
+   # Allow newer versions of the dependencies

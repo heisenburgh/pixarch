@@ -1,0 +1,22 @@
+--- PKGBUILD	2023-01-21 14:50:37.273457744 -0500
++++ PKGBUILD-surf	2023-01-21 14:50:49.127038490 -0500
+@@ -3,7 +3,7 @@
+ 
+ _pkgname=surf
+ pkgname=$_pkgname-git
+-pkgver=2.0.r82.g7dcce9e
++pkgver=2.1.r10.g665a709
+ pkgrel=1
+ pkgdesc="a WebKit based browser"
+ arch=('i686' 'x86_64')
+@@ -19,8 +19,8 @@
+             'mpv: default video player')
+ provides=("$_pkgname")
+ conflicts=("$_pkgname")
+-source=("$_pkgname::git+https://git.suckless.org/surf")
+-md5sums=('SKIP')
++source=("$_pkgname::git+https://git.suckless.org/surf" "surf-2.0-homepage.diff")
++md5sums=('SKIP' 'SKIP')
+ 
+ pkgver() {
+   cd "$_pkgname"

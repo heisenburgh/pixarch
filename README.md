@@ -68,7 +68,7 @@ reboot.
 ### 2.1 Installing the dot-files
 Clone this repo to your home directory ```~/```:
 ```bash
-git clone https://github.com/preceptsofzote/pixarch.git
+git clone https://github.com/heisenburgh/pixarch.git
 #Still in development, please clone at your own risk
 ```
 Change directory to ```pixarch/installation_scripts```:

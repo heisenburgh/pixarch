@@ -16,19 +16,13 @@ xdg-user-dir
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 export PATH=$PATH:/home/$USER/.local/bin
 
-yay=$(dialog --stdout --inputbox "Install yay as AUR helper? [y/N]" 0 0) || exit 1
-clear
-shopt -s nocasematch
-if [[ $yay =~ y ]]
-then
+echo 'Installing yay as AUR helper.'
 	git clone https://aur.archlinux.org/yay.git ~/code/aur/yay
         cd ~/code/aur/yay
         makepkg -si
         yay -S ttf-monocraft
 	fc-cache -fv
-else
-			echo "-- skipping, you are on your own for the aur and fonts."
-fi
+
 
 i3=$(dialog --stdout --inputbox "Install i3? [y/N]" 0 0) || exit 1
 clear
@@ -45,7 +39,7 @@ fi
 qtile=$(dialog --stdout --inputbox "Install Qtile? [y/N]" 0 0) || exit 1
 clear
 shopt -s nocasematch
-if [[ $i3 =~ y ]]
+if [[ $qtile =~ y ]]
 then
 	sudo pacman -S qtile
 	ln -sf $LINKDOT/flavours/qtile /home/$USER/.config/
@@ -69,6 +63,24 @@ then
                 sudo cp $LINKDOT/installation_scripts/theme.conf /etc/sddm.conf
 else 
 	echo "-- you're on your own for theming."
+fi
+
+browsel=$(dialog --stdout --inputbox "Install browsel for private search and web browser? [y/N]" 0 0) || exit 1
+if [[ $browsel =~ y ]]
+then
+	yay -G searxng-git
+	cd searxng-git
+	patch PKGBUILD -i $LINKDOT/applications/browsel/searxng.patch
+	yay -S searxng-git --answerdiff=None --noremovemake --pgpfetch --answerclean=None --noconfirm --asdeps
+	makepkg -si
+	yay -G surf-git
+	wget https://surf.suckless.org/patches/homepage/surf-2.0-homepage.diff
+	cd surf-git
+	sed 's/duckduckgo\.com/127.0.0.1\:8888/' -i surf-2.0-homepage.diff
+	patch PKGBUILD -i $LINKDOT/applications/browsel/surf.patch
+	makepkg -si
+else
+	echo 'browser and search engine installed'
 fi
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
