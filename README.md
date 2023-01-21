@@ -28,7 +28,7 @@ qzl2zg758f2rc9g5szwhxs6dqg8vcx9kwg2tdttzkg
 **LTC:**
 ltc1qc28rg7nuvrlw7hm6lyern36y4jsyp3u7fxnmtx
 
-**ETH**
+**ETH:**
 0xA5212281CE861643346Dfa383c6Db9F31741C79a
 
 ## 1. Logistics <img src="https://media2.giphy.com/media/Gm8w0lMcTY0a4/giphy.gif?cid=82a1493bolqqorahnuv9y1fpi6ryo4hdzjw5dtt6mjdi92uv&rid=giphy.gif" height="25" width="25"/>
