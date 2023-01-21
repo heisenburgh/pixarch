@@ -7,7 +7,7 @@ export LINKDOT=${PWD%/*}
 
 sudo pacman -S  go vim htop firefox xorg-server xorg-xinit xorg-xrdb xorg-xprop \
 		rofi exa pavucontrol tmux pamixer fzf xdg-user-dirs plank sddm lf \
-		feh git openssh alacritty picom polybar dash xss-lock dialog dex --needed
+		feh git openssh alacritty picom polybar dash xss-lock dialog dex --needed --noconfirm
 
 sudo ln -sfT dash /usr/bin/sh
 mkdir -p ~/.config ~/code/aur
@@ -29,7 +29,7 @@ clear
 shopt -s nocasematch
 if [[ $i3 =~ y ]]
 then
-	sudo pacman -S i3-wm
+	sudo pacman -S i3-wm --noconfirm
 	ln -sf $LINKDOT/flavours/i3 /home/$USER/.config/
         
 else
@@ -41,7 +41,7 @@ clear
 shopt -s nocasematch
 if [[ $qtile =~ y ]]
 then
-	sudo pacman -S qtile
+	sudo pacman -S qtile --noconfirm
 	ln -sf $LINKDOT/flavours/qtile /home/$USER/.config/
 else 
 	echo "-- if you didn't install i3 or Qtile, you're on your own for a GUI."
@@ -78,7 +78,7 @@ then
 	yay -G surf-git
 	cd surf-git
 	wget https://surf.suckless.org/patches/homepage/surf-2.0-homepage.diff
-	sed 's/duckduckgo\.com/127.0.0.1\:8888/' -i surf-2.0-homepage.diff
+	sed 's/https\:\/\/duckduckgo\.com/http\:\/\/127.0.0.1\:8888/' -i surf-2.0-homepage.diff
 	patch PKGBUILD -i $LINKDOT/applications/browsel/surf.patch
 	makepkg -si
 else
