@@ -76,8 +76,8 @@ then
 	makepkg -si
 	cd ~/code/aur
 	yay -G surf-git
-	wget https://surf.suckless.org/patches/homepage/surf-2.0-homepage.diff
 	cd surf-git
+	wget https://surf.suckless.org/patches/homepage/surf-2.0-homepage.diff
 	sed 's/duckduckgo\.com/127.0.0.1\:8888/' -i surf-2.0-homepage.diff
 	patch PKGBUILD -i $LINKDOT/applications/browsel/surf.patch
 	makepkg -si
