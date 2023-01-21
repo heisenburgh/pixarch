@@ -20,7 +20,7 @@ echo 'Installing yay as AUR helper.'
 	git clone https://aur.archlinux.org/yay.git ~/code/aur/yay
         cd ~/code/aur/yay
         makepkg -si
-        yay -S ttf-monocraft
+        yay -S ttf-monocraft --answerdiff=None --noremovemake --pgpfetch --answerclean=None --noconfirm --asdeps
 	fc-cache -fv
 
 
