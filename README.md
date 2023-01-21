@@ -1,4 +1,6 @@
-# Pixarch  ![IMG_6845](https://user-images.githubusercontent.com/62053026/213843727-cb812959-5d8f-42e7-9f1b-476a01ad1ad0.png)
+# Pixarch  
+
+![IMG_6845](https://user-images.githubusercontent.com/62053026/213843792-628e843f-2d6b-46fe-9211-653ea1513674.png)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/heisenburgh/pixarch?style=plastic) ![GitHub](https://img.shields.io/github/license/heisenburgh/pixarch?style=plastic) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/heisenburgh/pixarch?style=plastic) ![GitHub language count](https://img.shields.io/github/languages/count/heisenburgh/pixarch?color=critical&style=plastic) [![](https://dcbadge.vercel.app/api/server/MQCpbUfa&style=plastic)](https://discord.gg/MQCpbUfa)
 
