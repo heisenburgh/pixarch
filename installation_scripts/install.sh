@@ -10,7 +10,7 @@ sudo pacman -S  go vim htop firefox xorg-server xorg-xinit xorg-xrdb xorg-xprop 
 		feh git openssh alacritty picom polybar dash xss-lock dialog dex --needed
 
 sudo ln -sfT dash /usr/bin/sh
-mkdir -p ~/.config ~/code/aur ~/code/rice
+mkdir -p ~/.config ~/code/aur
 xdg-user-dir
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -68,11 +68,13 @@ fi
 browsel=$(dialog --stdout --inputbox "Install browsel for private search and web browser? [y/N]" 0 0) || exit 1
 if [[ $browsel =~ y ]]
 then
+	cd ~/code/aur
 	yay -G searxng-git
 	cd searxng-git
 	patch PKGBUILD -i $LINKDOT/applications/browsel/searxng.patch
 	yay -S searxng-git --answerdiff=None --noremovemake --pgpfetch --answerclean=None --noconfirm --asdeps
 	makepkg -si
+	cd ~/code/aur
 	yay -G surf-git
 	wget https://surf.suckless.org/patches/homepage/surf-2.0-homepage.diff
 	cd surf-git
@@ -80,7 +82,7 @@ then
 	patch PKGBUILD -i $LINKDOT/applications/browsel/surf.patch
 	makepkg -si
 else
-	echo 'browser and search engine installed'
+	echo 'browser and search engine not installed'
 fi
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
