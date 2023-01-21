@@ -66,19 +66,19 @@ when asked about additional packages, request git.
 reboot.
 
 ### 2.1 Installing the dot-files
-Clone this repo to your home directory ( ~ ):
+Clone this repo to your home directory ```~/```:
 
 ```bash
 git clone https://github.com/heisenburgh/pixarch.git
 ```
 
-Change directory to pixarch/installation_scripts:
+Change directory to ```pixarch/installation_scripts```:
 
 ```bash
 cd pixarch/installation_scripts
 ```
 
-Run install.sh and follow the prompts:
+Run ```install.sh``` and follow the prompts:
 
 ```bash
 ./install.sh
