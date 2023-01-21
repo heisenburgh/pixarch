@@ -7,7 +7,7 @@ Linux Distributions, in general, do not look as polished as proprietary operatin
 ## Screenshots <img src="https://media0.giphy.com/media/l3V0s5MV1kudEMP9C/giphy.gif?cid=82a1493bfq18fjawj4h3z9idqpfnn5brezcp05ffmdpkw0vf&rid=giphy.gif" width="20" height="25"/>
 ![VirtualBox_Pixarch_04_12_2022_10_34_44](https://user-images.githubusercontent.com/62053026/210720807-0465050e-2fe8-4718-96e6-be167cdebdf7.jpg)
 
-![VirtualBox_Pixarch_06_12_2022_00_15_11](https://user-images.githubusercontent.com/62053026/210720837-c1423f42-7675-4195-bcdc-17bbcd609dab.jpg)
+![VirtualBox_Pixarch_19_01_2023_18_44_07](https://user-images.githubusercontent.com/62053026/213844526-177609e6-e6a1-4132-bd5a-39994d628187.png)
 
 ![IMG_8504](https://user-images.githubusercontent.com/62053026/210720860-ff41bd60-256d-419f-9e3d-4bd59deed608.jpg)
 
