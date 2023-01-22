@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo "Welcome to Pixarch Installation Script"
 
 export LINKDOT=${PWD%/*}
@@ -62,10 +61,10 @@ then
 		sudo sed 's/\#GRUB_THEME\=\"\/path\/to\/gfxtheme\"/GRUB_THEME=\"\/boot\/grub\/grubel\/theme.txt\"/' -i /etc/default/grub
                 sudo cp $LINKDOT/installation_scripts/theme.conf /etc/sddm.conf
 else 
-	echo "-- you're on your own for theming."
+	echo "Grub and SDDM theme not installed."
 fi
 
-browsel=$(dialog --stdout --inputbox "Install browsel for private search and web browser? [y/N]" 0 0) || exit 1
+browsel=$(dialog --stdout --inputbox "Install browsel for Private search and Web browser? [y/N]" 0 0) || exit 1
 if [[ $browsel =~ y ]]
 then
 	cd ~/code/aur
@@ -82,7 +81,7 @@ then
 	patch PKGBUILD -i $LINKDOT/applications/browsel/surf.patch
 	makepkg -si
 else
-	echo 'browser and search engine not installed'
+	echo 'Browser and Search engine not installed.'
 fi
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -92,7 +91,7 @@ security=$(dialog --stdout --inputbox "Install Clamav and UFW? [y/N]" 0 0) || ex
 if [[ $security =~ y ]]
 then
 	        sudo sh $LINKDOT/installation_scripts/security.sh
-	else 
-	echo "-- moving on!"
+else 
+	echo "Clamav and UFW not installed."
 fi
 
