@@ -7,35 +7,29 @@ export LINKDOT=${PWD%/*}
 
 sudo pacman -S  go vim htop firefox xorg-server xorg-xinit xorg-xrdb xorg-xprop \
 		rofi exa pavucontrol tmux pamixer fzf xdg-user-dirs plank sddm lf \
-		feh git openssh alacritty picom polybar dash xss-lock dialog dex --needed
+		feh git openssh alacritty picom polybar dash xss-lock dialog dex --needed --noconfirm
 
 sudo ln -sfT dash /usr/bin/sh
-mkdir -p ~/.config ~/code/aur ~/code/rice
+mkdir -p ~/.config ~/code/aur
 xdg-user-dir
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 export PATH=$PATH:/home/$USER/.local/bin
 
-yay=$(dialog --stdout --inputbox "Install yay as AUR helper? [y/N]" 0 0) || exit 1
-clear
-shopt -s nocasematch
-if [[ $yay =~ y ]]
-then
+echo 'Installing yay as AUR helper.'
 	git clone https://aur.archlinux.org/yay.git ~/code/aur/yay
         cd ~/code/aur/yay
         makepkg -si
-        yay -S ttf-monocraft
+        yay -S ttf-monocraft --answerdiff=None --noremovemake --pgpfetch --answerclean=None --noconfirm --asdeps
 	fc-cache -fv
-else
-			echo "-- skipping, you are on your own for the aur and fonts."
-fi
+
 
 i3=$(dialog --stdout --inputbox "Install i3? [y/N]" 0 0) || exit 1
 clear
 shopt -s nocasematch
 if [[ $i3 =~ y ]]
 then
-	sudo pacman -S i3-wm
+	sudo pacman -S i3-wm --noconfirm
 	ln -sf $LINKDOT/flavours/i3 /home/$USER/.config/
         
 else
@@ -45,9 +39,9 @@ fi
 qtile=$(dialog --stdout --inputbox "Install Qtile? [y/N]" 0 0) || exit 1
 clear
 shopt -s nocasematch
-if [[ $i3 =~ y ]]
+if [[ $qtile =~ y ]]
 then
-	sudo pacman -S qtile
+	sudo pacman -S qtile --noconfirm
 	ln -sf $LINKDOT/flavours/qtile /home/$USER/.config/
 else 
 	echo "-- if you didn't install i3 or Qtile, you're on your own for a GUI."
@@ -69,6 +63,26 @@ then
                 sudo cp $LINKDOT/installation_scripts/theme.conf /etc/sddm.conf
 else 
 	echo "-- you're on your own for theming."
+fi
+
+browsel=$(dialog --stdout --inputbox "Install browsel for private search and web browser? [y/N]" 0 0) || exit 1
+if [[ $browsel =~ y ]]
+then
+	cd ~/code/aur
+	yay -G searxng-git
+	cd searxng-git
+	patch PKGBUILD -i $LINKDOT/applications/browsel/searxng.patch
+	yay -S searxng-git --answerdiff=None --noremovemake --pgpfetch --answerclean=None --noconfirm --asdeps
+	makepkg -si
+	cd ~/code/aur
+	yay -G surf-git
+	cd surf-git
+	wget https://surf.suckless.org/patches/homepage/surf-2.0-homepage.diff
+	sed 's/https\:\/\/duckduckgo\.com/http\:\/\/127.0.0.1\:8888/' -i surf-2.0-homepage.diff
+	patch PKGBUILD -i $LINKDOT/applications/browsel/surf.patch
+	makepkg -si
+else
+	echo 'browser and search engine not installed'
 fi
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg

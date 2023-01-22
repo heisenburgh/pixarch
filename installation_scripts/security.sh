@@ -21,11 +21,5 @@ sudo freshclam
 
 sudo systemctl enable --now clamav-daemon.service
 
-yay -S python-fangfrisch
-
-sudo -u clamav /usr/bin/fangfrisch --conf /etc/fangfrisch/fangfrisch.conf initdb
-
-sudo systemctl enable --now fangfrisch.timer
-
 printf "\nInstalled and Configured Clamav\n"
 
