@@ -71,7 +71,6 @@ reboot.
 Clone this repo to your home directory ```~/```:
 ```bash
 git clone https://github.com/heisenburgh/pixarch.git
-#Still in development, please clone at your own risk
 ```
 Change directory to ```pixarch/installation_scripts```:
 ```bash
@@ -80,6 +79,8 @@ cd pixarch/installation_scripts
 Run ```install.sh``` and follow the prompts:
 ```bash
 ./install.sh
+# Still in development and contains bugs. Run at your own risk.
 ```
-On reboot you will be ready to go 
+On reboot you will be ready to go.
+
 Use MOD+space to open Rofi (Your App Launcher) and MOD+enter to open Alacritty (Your Terminal Emulator)
