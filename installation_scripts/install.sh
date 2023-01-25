@@ -95,3 +95,8 @@ else
 	echo "Clamav and UFW not installed."
 fi
 
+#shell=$(dialog --stdout --input "Which shell do you use? " 0 0) || exit 1
+#if [[ $shell =~ bash ]]
+#then 
+
+
