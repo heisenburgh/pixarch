@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'Monocraft';
+  src: url('fonts/Monocraft.woff') format('woff'),
+      url('fonts/Monocraft.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+  } 
+  
+  #Main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1006px;
+    height: 660px;
+  }
+  
+  #Viewport{
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    width: 756px;
+    height: 600px;
+    background: #1B1B1B;
+  }
+  
+  #WelcomeText{
+    order: 1;
+    font-family: "Monocraft";
+    padding-top: 165px;
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+    width: 756px;
+  }
+  
+  #FoxImage{
+    padding-top: 30px;
+    order: 2;
+    width: 756px;
+    text-align: center;
+  }
+  
+  #Fox{
+    width: 179px;
+    height: 217.78px;
+  }
+  
+  #ButtonHandler{
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #262626;
+    height: 600px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  #Settings{
+    font-family: "Monocraft";
+    order: 1;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+  }
+  
+  #Appearance{
+    font-family: "Monocraft";
+    order: 2;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #Audio{
+    font-family: "Monocraft";
+    order: 3;
+    cursor: pointer;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #Bluetooth{
+    font-family: "Monocraft";
+    order: 4;
+    cursor: pointer;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #Display{
+    font-family: "Monocraft";
+    order: 5;
+    cursor: pointer;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #Documentation{
+    font-family: "Monocraft";
+    order: 6;
+    cursor: pointer;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #Packages{
+    font-family: "Monocraft";
+    order: 7;
+    cursor: pointer;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #Shortcuts{
+    font-family: "Monocraft";
+    order: 8;
+    cursor: pointer;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #Users{
+    font-family: "Monocraft";
+    order: 9;
+    cursor: pointer;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #Hotkeys{
+    font-family: "Monocraft";
+    order: 10;
+    cursor: pointer;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #WiFi{
+    font-family: "Monocraft";
+    order: 11;
+    cursor: pointer;
+    background-color: #262626;
+    height: 60px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #BottomBar{
+    order: 3;
+    width: 1006px;
+    height: 60px;
+    background: #141414;
+  }
+  
+  #ChangeWallpaper{
+    order: 1;
+    font-family: "Monocraft";
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: left;
+    width: 756px;
+    height: 60px;
+    text-indent: 20px;
+    display: flex;
+    align-items:center;
+  }
