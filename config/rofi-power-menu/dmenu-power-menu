@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Simple stand-alone wrapper for rofi-power-menu.
+#
+# This script takes the same CLI arguments as rofi-power-menu.
+#
+# rofi-script-to-dmenu needs to be installed
+
+# Use local rofi-power-menu if present. This makes developing easier.
+command -v ./rofi-power-menu >/dev/null
+powermenu_exists=$?
+if [ $powermenu_exists -eq 0 ]
+then
+    powermenu="./rofi-power-menu"
+else
+    powermenu="rofi-power-menu"
+fi
+
+cmd="$powermenu $@"
+rofi-script-to-dmenu "$cmd"

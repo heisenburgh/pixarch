@@ -51,6 +51,7 @@ ln -sf $LINKDOT/config/lf /home/$USER/.config/
 ln -sf $LINKDOT/config/picom /home/$USER/.config/
 ln -sf $LINKDOT/config/polybar /home/$USER/.config/
 ln -sf $LINKDOT/config/rofi /home/$USER/.config/
+ln -sf $LINKDOT/config/rofi-power-menu /home/$USER/.config/
 ln -sf $LINKDOT/config/vim /home/$USER/.config/
 
 theme=$(dialog --stdout --inputbox "Enter sudo password to copy Grub theme and SDDM theme to correct locations and fix the config files. Otherwise skip configuring both. Understand? [y/N]" 0 0) || exit 1
