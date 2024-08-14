@@ -1,0 +1,6 @@
+Todo: 
+
+1) Make decent website 
+2) Finish Browsel, dock and settings app 
+3) Clean up README.md
+
