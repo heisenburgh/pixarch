@@ -1,4 +1,3 @@
-Alacritty is depreciated migrate to toml 
 copy vimrc to ~ 
 newest sddm update breaks themes, use default for now 
 install bash theme(starship.rs) 
@@ -12,4 +11,10 @@ icons in poweroff rofi prompt not showing(also, adjust the dimensions of the pro
 log out in rofi powermenu doesn't work 
 retest rofi powermenu
 test qtile config for errors 
-edit grub theme 
+edit grub theme
+
+
+
+note: in the installation script link is used, which links pixarch files to the config file. 
+
+meaning, any changes in the pixarch directory will change actual config of the system. If required, change it.  
