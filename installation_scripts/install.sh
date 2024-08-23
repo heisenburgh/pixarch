@@ -52,12 +52,14 @@ ln -sf $LINKDOT/config/picom /home/$USER/.config/
 ln -sf $LINKDOT/config/polybar /home/$USER/.config/
 ln -sf $LINKDOT/config/rofi /home/$USER/.config/
 ln -sf $LINKDOT/config/rofi-power-menu /home/$USER/.config/
-
 #Installing vim-plug and moving vimrc 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ln -sf $LINKDOT/config/vim/.vimrc /home/$USER/
-
+vim +PlugInstall +qall
+#Starship bash prompt
+curl -sS https://starship.rs/install.sh | sh
+ln -sf ~/pixarch/config/starship.toml ~/.config/
 
 
 theme=$(dialog --stdout --inputbox "Enter sudo password to copy Grub theme and SDDM theme to correct locations and fix the config files. Otherwise skip configuring both. Understand? [y/N]" 0 0) || exit 1
@@ -70,7 +72,7 @@ then
 else 
 	echo "Grub and SDDM theme not installed."
 fi
-
+"""
 browsel=$(dialog --stdout --inputbox "Install browsel for Private search and Web browser? [y/N]" 0 0) || exit 1
 if [[ $browsel =~ y ]]
 then
@@ -90,7 +92,7 @@ then
 else
 	echo 'Browser and Search engine not installed.'
 fi
-
+"""
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo systemctl enable sddm
 
