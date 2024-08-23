@@ -1,7 +1,6 @@
 newest sddm update breaks themes, use default for now 
 use ncurses installer for whole installation script
 make an application or bash file to show keyboard commands 
-remove searx installation and browsel installation from installation script for now as still in development 
 debloat installation script 
 icons in poweroff rofi prompt not showing(also, adjust the dimensions of the prompt)
 log out in rofi powermenu doesn't work 
@@ -11,6 +10,5 @@ edit grub theme
 enable parallel installation in pacman
 
 
-note: in the installation script link is used, which links pixarch files to the config file. 
-
-meaning, any changes in the pixarch directory will change actual config of the system. If required, change it.  
+note: In the installation script link is used, which links pixarch files to the config file. 
+      Meaning, any changes in the Pixarch directory will change actual config files of the system. If required, change it.  
