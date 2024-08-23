@@ -52,7 +52,13 @@ ln -sf $LINKDOT/config/picom /home/$USER/.config/
 ln -sf $LINKDOT/config/polybar /home/$USER/.config/
 ln -sf $LINKDOT/config/rofi /home/$USER/.config/
 ln -sf $LINKDOT/config/rofi-power-menu /home/$USER/.config/
-#ln -sf $LINKDOT/config/vim/.vimrc /home/$USER/
+
+#Installing vim-plug and moving vimrc 
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -sf $LINKDOT/config/vim/.vimrc /home/$USER/
+
+
 
 theme=$(dialog --stdout --inputbox "Enter sudo password to copy Grub theme and SDDM theme to correct locations and fix the config files. Otherwise skip configuring both. Understand? [y/N]" 0 0) || exit 1
 if [[ $theme =~ y ]]
