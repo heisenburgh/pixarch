@@ -40,7 +40,7 @@ window {
     font:             "Monocraft 12";
     background-color: @background;
     border:           1;
-    border-color:     @background; 
+    border-color:     @selected-normal-background; 
     padding:          5px;
 }
 mainbox {
