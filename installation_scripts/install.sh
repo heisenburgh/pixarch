@@ -96,7 +96,8 @@ fi
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo systemctl enable sddm
 
-# have to make script to enable parallel installation in arch 
+# have to make script to enable parallel installation in arch
+# sudo sed -i 's/ParallelDownloads = .*/ParallelDownloads = 5/' /etc/pacman.conf
 
 
 security=$(dialog --stdout --inputbox "Install Clamav and UFW? [y/N]" 0 0) || exit 1
