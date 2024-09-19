@@ -7,7 +7,7 @@ log out in rofi powermenu doesn't work
 retest rofi powermenu
 test qtile config for errors 
 edit grub theme
-enable parallel installation in pacman
+enable parallel installation in pacman(done, testing left, uncomment from installation script, to confirm)
 
 
 note: In the installation script link is used, which links pixarch files to the config file. 
