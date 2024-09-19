@@ -96,6 +96,9 @@ fi
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo systemctl enable sddm
 
+# have to make script to enable parallel installation in arch 
+
+
 security=$(dialog --stdout --inputbox "Install Clamav and UFW? [y/N]" 0 0) || exit 1
 if [[ $security =~ y ]]
 then
