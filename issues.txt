@@ -2,13 +2,13 @@ newest sddm update breaks themes, use default for now
 use ncurses installer for whole installation script
 make an application or bash file to show keyboard commands 
 debloat installation script 
-icons in poweroff rofi prompt not showing(also, adjust the dimensions of the prompt)
 log out in rofi powermenu doesn't work 
 retest rofi powermenu
 test qtile config for errors 
 edit grub theme
 enable parallel installation in pacman(done, testing left, uncomment from installation script, to confirm)
 
+Also, uncomment Color from pacman.conf and add ILoveCandy after Color
 
 note: In the installation script link is used, which links pixarch files to the config file. 
       Meaning, any changes in the Pixarch directory will change actual config files of the system. If required, change it.  

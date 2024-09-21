@@ -21,7 +21,7 @@ echo 'Installing yay as AUR helper.'
 	makepkg -si
 	cd ..
 	rm -rf yay
-        yay -S ttf-monocraft ttf-nerd-fonts-symbols-mono --answerdiff=None --noremovemake --pgpfetch --answerclean=None --noconfirm --asdeps
+        yay -S ttf-monocraft ttf-nerd-fonts-symbols-mono rofi-power-menu --answerdiff=None --noremovemake --pgpfetch --answerclean=None --noconfirm --asdeps
 	fc-cache -fv
 
 
@@ -53,7 +53,6 @@ ln -sf $LINKDOT/config/lf /home/$USER/.config/
 ln -sf $LINKDOT/config/picom /home/$USER/.config/
 ln -sf $LINKDOT/config/polybar /home/$USER/.config/
 ln -sf $LINKDOT/config/rofi /home/$USER/.config/
-ln -sf $LINKDOT/config/rofi-power-menu /home/$USER/.config/
 #Installing vim-plug and moving vimrc 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
