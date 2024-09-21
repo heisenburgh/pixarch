@@ -9,17 +9,19 @@ sudo pacman -S  go vim htop firefox xorg-server xorg-xinit xorg-xrdb xorg-xprop 
 		feh git openssh alacritty picom polybar dash xss-lock dialog dex --needed --noconfirm
 
 sudo ln -sfT dash /usr/bin/sh
-mkdir -p ~/.config ~/code/aur
 xdg-user-dir
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 export PATH=$PATH:/home/$USER/.local/bin
 
 echo 'Installing yay as AUR helper.'
-	git clone https://aur.archlinux.org/yay.git ~/code/aur/yay
-        cd ~/code/aur/yay
-        makepkg -si
-        yay -S ttf-monocraft --answerdiff=None --noremovemake --pgpfetch --answerclean=None --noconfirm --asdeps
+	cd /tmp
+	git clone https://aur.archlinux.org/yay.git
+        cd yay
+	makepkg -si
+	cd ..
+	rm -rf yay
+        yay -S ttf-monocraft ttf-nerd-fonts-symbols-mono --answerdiff=None --noremovemake --pgpfetch --answerclean=None --noconfirm --asdeps
 	fc-cache -fv
 
 
@@ -97,15 +99,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo systemctl enable sddm
 
 # have to make script to enable parallel installation in arch
-# sudo sed -i 's/ParallelDownloads = .*/ParallelDownloads = 5/' /etc/pacman.conf
+sudo sed -i 's/ParallelDownloads = .*/ParallelDownloads = 5/' /etc/pacman.conf
 
-
-security=$(dialog --stdout --inputbox "Install Clamav and UFW? [y/N]" 0 0) || exit 1
-if [[ $security =~ y ]]
-then
-	        sudo sh $LINKDOT/installation_scripts/security.sh
-else 
-	echo "Clamav and UFW not installed."
-fi
 
 
