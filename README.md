@@ -22,11 +22,14 @@ Run ```install.sh``` and follow the prompts:
 On reboot you will be ready to go.
 Use MOD+space to open Rofi (Your App Launcher) and MOD+enter to open Alacritty (Your Terminal Emulator)
 
-#### To install the latest testing branch
+#### 2.1 To install the latest testing branch
 
+
+To change the branch to testing: 
 ```bash
 git checkout testing 
 ```
+Running the installation script: 
 ```bash
 cd installation_scripts && ./install.sh
 ```
