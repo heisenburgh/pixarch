@@ -24,6 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 import subprocess
+import os
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
@@ -69,8 +70,8 @@ keys = [
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "shift"], "e", lazy.spawn("rofi -show power-menu -modi power-menu:~/.config/rofi-power-menu/rofi-power-menu"), desc="Shutdown Qtile"),
+    Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key([mod, "shift"], "e", lazy.spawn("rofi -show p -modi p:'rofi-power-menu' --symbols-font 'Symbols Nerd Font Mono'' -theme-str 'window {width: 20em;} listview {lines:6;}''"), desc="Shutdown Qtile"),
     Key([mod], "space", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),
 ]
 
@@ -202,7 +203,6 @@ wmname = "LG3D"
 
 @hook.subscribe.startup_once
 def autostart_once():
-    processes = ['polybar']
+    processes = ['polybar', 'xrandr --output Virtual-1 --mode 1920x1080']
     for p in processes:
-        subprocess.Popen(p)
-
+        os.system(p)

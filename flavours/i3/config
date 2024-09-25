@@ -176,7 +176,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # power menu rofi
-bindsym $mod+Shift+e exec "rofi   -show p   -modi p:'rofi-power-menu --symbols-font 'Symbols Nerd Font Mono''   -theme-str 'window {width: 20em;} listview {lines: 6;}'" 
+bindsym $mod+Shift+e exec "rofi -show p -modi p:'rofi-power-menu --symbols-font 'Symbols Nerd Font Mono'' -theme-str 'window {width: 20em;} listview {lines: 6;}'" 
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
