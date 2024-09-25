@@ -1,0 +1,3 @@
+install aur package
+
+yay -S i3lock-color 

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+scrot /tmp/currentworkspace.png
+magick /tmp/currentworkspace.png -blur 0x5 /tmp/currentworkspaceblur.png
+composite -gravity Center overlay.png /tmp/currentworkspaceblur.png /tmp/currentlockbackground.png
+i3lock -i /tmp/currentlockbackground.png --time-font='Monocraft' --date-font='Monocraft' --clock
+
+rm /tmp/current*
