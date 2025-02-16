@@ -54,7 +54,7 @@ shopt -s nocasematch
 if [[ $hyprland =~ y ]]
 then 
     sudo pacman -S hyprland --noconfirm
-		# Add config here 
+	# Add config here 
 else
     echo "-- Hyprland not installed"
 fi 
@@ -82,17 +82,26 @@ echo 'eval "$(starship init bash)"' >> ~/.bashrc
 sudo cp ~/pixarch/applications/pixlock/* /bin/  
 
 
-theme=$(dialog --stdout --inputbox "Enter sudo password to copy Grub theme and SDDM theme to correct locations and fix the config files. Otherwise skip configuring both. Understand? [y/N]" 0 0) || exit 1
-if [[ $theme =~ y ]]
+grub_theme=$(dialog --stdout --inputbox "Install Grub theme?  [y/N]" 0 0) || exit 1
+if [[ $grub_theme =~ y ]]
 then
 	        sudo cp -r $LINKDOT/boot/grub/grubel /boot/grub/
-		sudo cp -r $LINKDOT/boot/sddm/themes/pixarch_sddm /usr/share/sddm/themes/
 		sudo sed 's/\#GRUB_THEME\=\"\/path\/to\/gfxtheme\"/GRUB_THEME=\"\/boot\/grub\/grubel\/theme.txt\"/' -i /etc/default/grub
-                sudo cp $LINKDOT/boot/theme.conf /etc/sddm.conf
 else 
-	echo "Grub and SDDM theme not installed."
+	echo "Grub theme not installed."
 fi
 
+# Unfortunately, updates for SDDM break themes because of new QT6 implementation. 
+# Thus, I am separating grub and SDDM theme installation 
+
+sddm_theme=$(dialog --stdout --inputbox "Install SDDM theme(unstable)? [y/N]" 0 0) || exit 1 
+if [[ $sddm_theme =~ y ]]
+then 
+		sudo cp -r $LINKDOT/boot/sddm/themes/pixarch_sddm /usr/share/sddm/themes/
+                sudo cp $LINKDOT/boot/theme.conf /etc/sddm.conf
+else
+	echo "SDDM theme not installed"
+fi 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo systemctl enable sddm.service
 
